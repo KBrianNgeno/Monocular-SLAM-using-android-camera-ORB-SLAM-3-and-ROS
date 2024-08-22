@@ -84,14 +84,14 @@ Possible issues fix:
 
 `find_package(OpenCV <OPENCV version you installed> QUIET)`
 
-include_directories(
+<pre><p>include_directories(
 ${PROJECT_SOURCE_DIR}
 ${PROJECT_SOURCE_DIR}/../../../
 ${PROJECT_SOURCE_DIR}/../../../include
 ${PROJECT_SOURCE_DIR}/../../../include/CameraModels
 ${PROJECT_SOURCE_DIR}/../../../Thirdparty/Sophus <!-- Add this line -->
 ${Pangolin_INCLUDE_DIRS}
-)
+)</p></pre>
 
 Comment out or deleted the section "Node for monocular camera (Augmented Reality Demo)" if you don't intend to use it.
 
@@ -128,10 +128,10 @@ Code and instructions under android_camera_to_ros_node directory
 
 ## Putting it all together
 
-Terminal 1 - `roscore`
-Terminal 2 - `rosrun ORB_SLAM3 Mono Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml`
-Terminal 3 - `roslaunch orb_slam3_ros euroc_mono.launch`
-Terminal 4 - `python3 <path_to_androidCamera.py>/androidCamera.py`
+Terminal 1 - `roscore`<br/>
+Terminal 2 - `rosrun ORB_SLAM3 Mono Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml`<br/>
+Terminal 3 - `roslaunch orb_slam3_ros euroc_mono.launch`<br/>
+Terminal 4 - `python3 <path_to_androidCamera.py>/androidCamera.py`<br/>
 
 ## Customizing RVIZ menu
 These options are in the orb_slam3_no_imu.rviz file of the ORBSLAM3 ROS wrapper package
