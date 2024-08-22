@@ -89,7 +89,7 @@ ${PROJECT_SOURCE_DIR}
 ${PROJECT_SOURCE_DIR}/../../../
 ${PROJECT_SOURCE_DIR}/../../../include
 ${PROJECT_SOURCE_DIR}/../../../include/CameraModels
-${PROJECT_SOURCE_DIR}/../../../Thirdparty/Sophus <!-- Add this line -->
+${PROJECT_SOURCE_DIR}/../../../Thirdparty/Sophus # Add this line
 ${Pangolin_INCLUDE_DIRS}
 )</p></pre>
 
