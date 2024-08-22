@@ -17,7 +17,7 @@ Solution:
 
 `sudo add-apt-repository ppa:savoury1/build-tools`  
 `sudo apt update`   
-`sudo apt istall catch2`  
+`sudo apt install catch2`  
 This will allow for installation to complete successfully but the optional test won't work.
 
 #### OpenCV
@@ -49,12 +49,12 @@ Wayland
 
 Realsense issues:
 Clone librealsense repo
-`cd librealsense-2.54.2/`
-`sudo apt install libssl-dev libusb-1.0.0-dev libudev-dev pkg-config libgtk-3-dev git wget cmake build-essential libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at`
-or `sudo apt-get install libssl-dev libusb-1.0-0-dev libudev-dev pkg-config libgtk-3-dev git wget cmake build-essential libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at`
-`mkdir build && cd build`
-`cmake ../ -DFORCE_RSUSB_BACKEND=true -DCMAKE_BUILD_TYPE=release -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=true`
-`sudo make uninstall && make clean && make -j8 && sudo make install`
+`cd librealsense-2.54.2/`<br/>
+`sudo apt install libssl-dev libusb-1.0.0-dev libudev-dev pkg-config libgtk-3-dev git wget cmake build-essential libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at`<br/>
+or `sudo apt-get install libssl-dev libusb-1.0-0-dev libudev-dev pkg-config libgtk-3-dev git wget cmake build-essential libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at`<br/>
+`mkdir build && cd build`<br/>
+`cmake ../ -DFORCE_RSUSB_BACKEND=true -DCMAKE_BUILD_TYPE=release -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=true`<br/>
+`sudo make uninstall && make clean && make -j8 && sudo make install`<br/>
   
 
 ## ORB SLAM 3
@@ -66,7 +66,7 @@ Possible compiling issue fix:
 
 ## Running EuRoc Datase
 Download dataset
-`./Examples/Monocular/mono_euroc ./Vocabulary/ORBvoc.txt ./Examples/Monocular/EuRoC.yaml ~/Downloads/MH_01/ ./Examples/Monocular/EuRoC_TimeStamps/MH01.txt  dataset-MH01_mono`
+`./Examples/Monocular/mono_euroc ./Vocabulary/ORBvoc.txt ./Examples/Monocular/EuRoC.yaml ~/Downloads/MH_01/ ./Examples/Monocular/EuRoC_TimeStamps/MH01.txt  dataset-MH01_mono`<br/>
 `./Examples/Stereo/stereo_euroc ./Vocabulary/ORBvoc.txt ./Examples/Stereo/EuRoC.yaml ~/Downloads/MH_01/ ./Examples/Stereo/EuRoC_TimeStamps/MH01.txt  dataset-MH01_stereo`
 
 ## ORB SLAM ROS
@@ -78,14 +78,14 @@ Possible issues fix:
 
 `find_package(OpenCV <OPENCV version you installed> QUIET)`
 
-`include_directories(
+include_directories(
 ${PROJECT_SOURCE_DIR}
 ${PROJECT_SOURCE_DIR}/../../../
 ${PROJECT_SOURCE_DIR}/../../../include
 ${PROJECT_SOURCE_DIR}/../../../include/CameraModels
 ${PROJECT_SOURCE_DIR}/../../../Thirdparty/Sophus <!-- Add this line -->
 ${Pangolin_INCLUDE_DIRS}
-)`
+)
 
 Comment out or deleted the section "Node for monocular camera (Augmented Reality Demo)" if you don't intend to use it.
 
@@ -95,7 +95,7 @@ Run build_ros.sh.
 Clone repo: [link](https://github.com/thien94/orb_slam3_ros)
 
 Fix if the the ROS package can't be found after catkin build:
-`source /home/<user>/catkin_ws/devel/setup.bash`
+`source /home/<user>/catkin_ws/devel/setup.bash`<br/>
 `roslaunch orbslam3_ros euroc_mono.launch`
 
 ## Droidcam
@@ -106,7 +106,7 @@ Linux setup [instructions](https://www.dev47apps.com/droidcam/linux/)
 
 Possible issues on linux client:
 1. `error adding adb forward`
-`sudo adb kill-server`
+`sudo adb kill-server`<br/>
 `sudo adb start-server`
 
 Launch app on phone
