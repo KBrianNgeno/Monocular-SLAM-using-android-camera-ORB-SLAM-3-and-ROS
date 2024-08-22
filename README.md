@@ -50,10 +50,15 @@ Wayland
 Realsense issues:
 Clone librealsense repo
 `cd librealsense-2.54.2/`<br/>
+
 `sudo apt install libssl-dev libusb-1.0.0-dev libudev-dev pkg-config libgtk-3-dev git wget cmake build-essential libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at`<br/>
-or `sudo apt-get install libssl-dev libusb-1.0-0-dev libudev-dev pkg-config libgtk-3-dev git wget cmake build-essential libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at`<br/>
+or 
+`sudo apt-get install libssl-dev libusb-1.0-0-dev libudev-dev pkg-config libgtk-3-dev git wget cmake build-essential libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at`<br/>
+
 `mkdir build && cd build`<br/>
+
 `cmake ../ -DFORCE_RSUSB_BACKEND=true -DCMAKE_BUILD_TYPE=release -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=true`<br/>
+
 `sudo make uninstall && make clean && make -j8 && sudo make install`<br/>
   
 
@@ -67,6 +72,7 @@ Possible compiling issue fix:
 ## Running EuRoc Datase
 Download dataset
 `./Examples/Monocular/mono_euroc ./Vocabulary/ORBvoc.txt ./Examples/Monocular/EuRoC.yaml ~/Downloads/MH_01/ ./Examples/Monocular/EuRoC_TimeStamps/MH01.txt  dataset-MH01_mono`<br/>
+
 `./Examples/Stereo/stereo_euroc ./Vocabulary/ORBvoc.txt ./Examples/Stereo/EuRoC.yaml ~/Downloads/MH_01/ ./Examples/Stereo/EuRoC_TimeStamps/MH01.txt  dataset-MH01_stereo`
 
 ## ORB SLAM ROS
@@ -106,6 +112,7 @@ Linux setup [instructions](https://www.dev47apps.com/droidcam/linux/)
 
 Possible issues on linux client:
 1. `error adding adb forward`
+
 `sudo adb kill-server`<br/>
 `sudo adb start-server`
 
